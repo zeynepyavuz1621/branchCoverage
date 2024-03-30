@@ -24,4 +24,15 @@ public class TestUtil {
     assertFalse(c.compute(new int[]{1, 2})); 
   }
 
+  @Test
+  public void test3() { 
+    try {
+      c.compute(new int[]{0, 0, 0});
+      fail("Expected RuntimeException was not thrown");
+    } catch (RuntimeException e) {
+        // Expected exception was thrown, so the test passes
+        assertTrue(true);
+    }
+  }
+
 }
