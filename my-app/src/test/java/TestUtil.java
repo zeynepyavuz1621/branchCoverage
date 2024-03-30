@@ -18,4 +18,10 @@ public class TestUtil {
   public void test1() { 
     assertFalse(c.compute(new int[]{1})); 
   }
+
+  @Test
+  public void test2() { 
+    assertFalse(c.compute(new int[]{1, 2})); 
+  }
+
 }
