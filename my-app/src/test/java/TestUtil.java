@@ -35,4 +35,9 @@ public class TestUtil {
     }
   }
 
+  @Test
+  public void test4() { 
+    assertTrue(c.compute(new int[]{1, 1, 1})); 
+  }
+
 }
