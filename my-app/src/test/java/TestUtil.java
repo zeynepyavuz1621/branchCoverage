@@ -14,4 +14,8 @@ public class TestUtil {
   @Test
   public void example() { assertTrue(true); }
 
+  @Test
+  public void test1() { 
+    assertFalse(c.compute(new int[]{1})); 
+  }
 }
