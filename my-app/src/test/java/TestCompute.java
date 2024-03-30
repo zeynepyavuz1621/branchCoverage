@@ -15,4 +15,12 @@ public class TestCompute {
     assertTrue(true);
   }
 
+  @Test
+  public void test1() {
+    MessageQueue mq = mock(MessageQueue.class);
+    c = new Compute(mq);
+    when(mq.size()).thenReturn(0);
+    assertEquals(-1, c.countNumberOfOccurrences(""));
+  }
+
 }
