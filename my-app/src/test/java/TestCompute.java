@@ -15,7 +15,7 @@ public class TestCompute {
     assertTrue(true);
   }
 
-  @Test
+  @Test // to check if the queue size is zero are we getting false
   public void test1() {
     MessageQueue mq = mock(MessageQueue.class);
     c = new Compute(mq);
@@ -23,7 +23,7 @@ public class TestCompute {
     assertEquals(-1, c.countNumberOfOccurrences(""));
   }
 
-  @Test
+  @Test // to check if the queue does not contain e are we getting false
   public void test2() {
     MessageQueue mq = mock(MessageQueue.class);
     c = new Compute(mq);
@@ -33,7 +33,7 @@ public class TestCompute {
     assertEquals(0, c.countNumberOfOccurrences(e));
   }
 
-  @Test
+  @Test // to check if the queue contains the e are we counting it 
   public void test3() {
     MessageQueue mq = mock(MessageQueue.class);
     c = new Compute(mq);
@@ -44,7 +44,7 @@ public class TestCompute {
     assertEquals(1, c.countNumberOfOccurrences(e));
   }
 
-  @Test
+  @Test // to check if the queue does not have e in the certain index are we not counting it
   public void test4() {
     MessageQueue mq = mock(MessageQueue.class);
     c = new Compute(mq);

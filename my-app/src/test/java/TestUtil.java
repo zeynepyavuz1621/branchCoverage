@@ -11,20 +11,20 @@ public class TestUtil {
   @Before
   public void setUp() { c = new Util(); }
 
-  @Test
+  @Test 
   public void example() { assertTrue(true); }
 
-  @Test
+  @Test // to check if the parameter length is 1 are we getting false
   public void test1() { 
     assertFalse(c.compute(new int[]{1})); 
   }
 
-  @Test
+  @Test // to check if the parameter length is even are we getting false
   public void test2() { 
     assertFalse(c.compute(new int[]{1, 2})); 
   }
 
-  @Test
+  @Test // to check if the parameter contains 0 are we getting RuntimeException
   public void test3() { 
     try {
       c.compute(new int[]{0, 0, 0});
@@ -36,12 +36,12 @@ public class TestUtil {
   }
 
   @Test
-  public void test4() { 
+  public void test4() { // to check if the current sum could be divided the current index are we getting true
     assertTrue(c.compute(new int[]{1, 1, 1})); 
   }
 
   @Test
-  public void test5() { 
+  public void test5() { // to check if the current sum could not be divided the current index anytime in the loop are we getting false
     assertFalse(c.compute(new int[]{5, 7, 5})); 
   }
 
